@@ -1,10 +1,12 @@
 (function(exports) {
-  function Note(note_message) {
-    this.note_message = note_message;
+  'use strict';
+
+  function Note(text) {
+    this.text = text;
   }
 
-  Note.prototype.getNoteMessage = function() {
-    return this.note_message;
+  Note.prototype.getText = function() {
+    return this.text;
   };
 
   exports.Note = Note;
