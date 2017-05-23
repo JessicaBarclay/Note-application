@@ -10,22 +10,36 @@
     if( note.getText() === string ) {
       console.log(note.getText());
     } else {
-      throw Error( 'Object does not contain any text' );
+      throw Error('Object does not contain any text');
     }
   }
 
-  function returnNoteList(){
+  function returnNoteListNotes(){
 
     noteList.setNotes(note);
 
     if( noteList.getNotes() === note) {
       console.log(noteList.getNotes());
     } else {
-      throw Error( 'Object does not contain any Note objects' );
+      throw Error('Object does not contain any Note objects');
     }
   }
 
-  returnNoteList();
+  function createNewNote() {
+    var noteList = new NoteList();
+    var note = new Note(string);
+
+    noteList.createNote(string);
+
+    if( noteList.getNotes() === note ) {
+      console.log(noteList.getNotes());
+    } else {
+      throw Error('Object does not contain any Note objects');
+    }
+  }
+
+  createNewNote();
+  returnNoteListNotes();
   returnText();
 
 })(this);
