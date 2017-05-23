@@ -6,13 +6,7 @@
   }
 
   NoteList.prototype.getNotes = function () {
-    for(var i = 0; i < this.notes.length; i++) {
-      return this.notes[i];
-    }
-  };
-
-  NoteList.prototype.setNotes = function (note) {
-    this.notes.push(note);
+    return this.notes;
   };
 
   NoteList.prototype.createNote = function (string) {

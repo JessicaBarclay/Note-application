@@ -1,15 +1,15 @@
 (function(exports) {
   'use strict';
 
-  function View(){
-
-  };
+  function View(list){
+    this.list = list;
+  }
 
   View.prototype.createListHTML = function() {
     var string = "";
-    for(var i = 0; i < this.notes.length; i++) {
-          string += "<li><div>" + this.notes[i].getText() + "</div></li>";
-        };
+    for(var i = 0; i < this.list.getNotes().length; i++) {
+          string += "<li><div>" + this.list.getNotes()[i].getText() + "</div></li>";
+        }
     return "<ul>" + string + "</ul>";
   };
 

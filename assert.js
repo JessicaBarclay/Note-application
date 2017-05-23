@@ -15,8 +15,8 @@ var assert = {
     }
   },
 
-  isObject: function(assertionToCheck) {
-    if(Object.prototype.toString.call(assertionToCheck) !== '[object Object]' ) {
+  isArray: function(assertionToCheck) {
+    if(Object.prototype.toString.call(assertionToCheck) !== '[object Array]' ) {
       throw new Error('Failed: ' + assertionToCheck + ' is not truthy');
     } else {
       console.log('Passed');

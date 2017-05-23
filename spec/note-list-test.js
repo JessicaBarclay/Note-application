@@ -5,18 +5,11 @@
   var note = new Note(string);
   var noteList = new NoteList();
 
-  function returnNoteListNotes(){
-    noteList.setNotes(note);
-    assert.isTrue( noteList.getNotes() === note);
-  }
-
   function createNewNote() {
-    var noteList = new NoteList();
     noteList.createNote(string);
-    assert.isTrue(noteList.getNotes().constructor === note.constructor);
+    assert.isTrue(noteList.getNotes()[0].constructor === note.constructor);
   }
 
   createNewNote();
-  returnNoteListNotes();
 
 })(this);
