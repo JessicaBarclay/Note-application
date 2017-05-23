@@ -9,7 +9,7 @@
   var view = new View(list);
 
   function returnString() {
-    assert.isTrue(view.createListHTML() === html);
+    assert.isTrue(view.createListHTML() === html, view.createListHTML());
   }
 
   returnString();

@@ -1,7 +1,7 @@
 var assert = {
-  isTrue: function(assertionToCheck) {
+  isTrue: function(assertionToCheck, assertion) {
     if(!assertionToCheck) {
-      throw new Error('Failed: ' + assertionToCheck + ' is not truthy');
+      throw new Error('Failed: ' + assertionToCheck + ' is not truthy: ' + assertion);
     } else {
       console.log('Passed');
     }
