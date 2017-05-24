@@ -4,22 +4,22 @@
   var string = 'Doctor\'s apt';
 
   function handlesEmptyList() {
-    var list = new NoteList();
+    var list = new Notepad();
     var view = new View(list);
-    var html = "<ul></ul>"
+    var html = "<ul></ul>";
     assert.isTrue(view.createListHTML() === html, view.createListHTML());
   }
 
   function returnOneNoteAsString() {
-    var list = new NoteList();
+    var list = new Notepad();
     var view = new View(list);
-    var html = "<ul><li><div>Doctor\'s apt</div></li></ul>"
+    var html = "<ul><li><div>Doctor\'s apt</div></li></ul>";
     list.createNote(string);
     assert.isTrue(view.createListHTML() === html, view.createListHTML());
   }
 
   function returnsTwoNotesAsString() {
-    var list = new NoteList();
+    var list = new Notepad();
     var view = new View(list);
     var html = "<ul><li><div>Doctor\'s apt</div></li><li><div>Doctor\'s apt</div></li></ul>";
     list.createNote(string);
