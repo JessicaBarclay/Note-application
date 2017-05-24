@@ -1,7 +1,10 @@
 (function(exports){
+  
   function changeText() {
     var element = document.getElementById('app');
-    element.text = 'howdy';
+    element.innerHTML = "Howdy";
   }
-  exports.changeText = changeText;
+
+  changeText();
+
 })(this);
